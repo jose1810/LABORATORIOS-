@@ -1,0 +1,29 @@
+
+import unittest
+
+print("BIENVENIDOS A PRUEBAS UNITARIAS")
+print("QUIZ #5")
+class registro:
+    try:
+        def registro(self,usuario,edad):
+
+            usuario=input("Por Favor ingresa el nombre: ")
+            edad=input("Por Favor ingresa la edad: ")
+            return {"usuario:":usuario,"apellido":usuario+"Bonilla","edad:":edad}
+    except Exception:
+          print("ERROR")
+
+class NotificationsTestCase(unittest.TestCase):
+    try:
+
+        def test_user_repository(self):
+            users=registro()
+            user=users.registro("Jose","21")
+
+
+            self.assertEqual("JoseBonilla",user["apellido"])
+    except Exception:
+          print("ERROR")
+
+if __name__ == '__main__':
+        unittest.main()
